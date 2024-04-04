@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    /* ป้องกันการมีการเลื่อนบาร์ข้าง */
+    background-image: url(./img/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* title */
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./img/block.png);
+    width: 30vw;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    border: 4px rgb(68, 68, 68) solid; 
+    border-radius: 10px;
+    font-size: 1.8vw;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.5)
+}
+/* title */
+
+/* mainbox */
+.mainbox{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    background: #000;
+    margin-top: 20px;
+    width: 95vw;
+    height: 85vh;
+}
+.inventory{
+    background: yellow;
+    width: 35vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 5px;
+}
+.itembox{
+    background: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.charactor-box{
+    background: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.skillbox{
+    background: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+/* mainbox */
+
+/* submainbox */
+/* item 2*/
+.item-use{
+    background: #ffffff;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    border-radius: 5px;
+}
+.name-item-box{
+    width: 90%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+.name-hp-box{
+    width: 90%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+.screen-item{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.wea-box{
+    border: 3px red solid;
+    transition: 0.6s;
+}
+
+.hp-and-mana-use{
+    background: #ffffff;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 50%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.screen-hp{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    padding: 5px;
+    height: 100%;
+}
+.item-hp-box{
+    border: 3px red solid;
+}
+/* item 2*/
+/* Charactor 3 */
+.main-cha-box{
+    width: 96%;
+    height: 98%;
+    background: #ffffff;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+}
+.cha-info{
+    display: flex;
+    flex-direction: column;
+    border: #000 2px solid;
+    height: 100%;
+}
+.name-cha-box{
+    width: 90%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+.img-cha-box{
+    border: 3px rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    width: 97%;
+    height: 100%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #292929;
+}
+/* Charactor 3 */
+/* skill 4 */
+.main-skill-box{
+    background: #ffffff;
+    height: 98%;
+    margin: 5px 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.skill-box-img-main{
+    border: 2px black solid;
+    border-radius: 5px;
+    height: 50%;
+    margin: 5px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+}
+.player-info{
+    border: 2px black solid;
+    border-radius: 5px;
+    height: 50%;
+    margin: 0px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+}
+.name-skill-box{
+    width: 90%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+.name-playper-info-box{
+    width: 90%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+.skillbox-sub-img{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    height: 100%;
+    padding: 5px;
+}
+.img-skill{
+    border: 3px red solid;
+    border-radius: 50%;
+}
+.playerinfo-sub{
+    border: 1px red solid;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 3px;
+}
+.basicskill{
+    border: 2px green solid;
+    width: 50%;
+    margin-right: 5px;
+    background: #292929;
+    color: white;
+}
+.advanceskill{
+    border: 2px green solid;
+    width: 50%;
+    background: #292929;
+    color: white;
+}
+/* skill 4 */
+/* inventory */
+.main-inventory{
+    background: #ffffff;
+    height: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.select-in-and-skil{
+    display: flex;
+}
+.inv{
+    width: 100%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.inv:hover{
+    transform: scale(1.05);
+    background: rgb(170, 18, 18);
+    color: black;
+}
+.ski:hover{
+    transform: scale(1.05);
+    background: rgb(170, 18, 18);
+    color: black;
+}
+.ski{
+    width: 100%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.invent-box-sub{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: 100%;
+}
+/* inventory */
+
+
+
+
+.name-of-user-choose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+.showitemchoose{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    padding: 5px;
+    height: 100%;
+}
+.inv_deta_img{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    border: 2px red solid;
+}
+.inv-imgg{
+    border: 3px black solid;
+    width: 40%;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.skill-cricle{
+    border: 3px black solid;
+    width: 40%;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.inv-detail{
+    width: 50%;
+    padding-left: 5px;
+}
+/* submainbox */
+
+
+/* modal inventory */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+    padding-right: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 99;
+}
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-card-detail-show{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
+    background: #b6b6b6;
+    z-index: 10;
+    padding: 20px;
+    border: 1px red solid;
+    padding: 5px;
+}
+.namecard{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detia-item{
+    display: flex;
+    height: 40%;
+    width: 100%;
+}
+.img-item-this-show{
+    width: 100%;
+    height: 100%;
+}
+.imgitem-g{
+    width: 100%;
+    height: 100%;
+    border: 4px red solid;
+    border-radius: 50%;
+}
+.detail-item-this-show{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 10px;
+}
+.detail-item-this-show-name{
+    color: white;
+    background-color: #292929;
+    border: 2px red solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.detail-this-this-item{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5px;
+}
+.stat{
+    background: #000;
+    color: white;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px red solid;
+}
+.basic_ad-item{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+}
+.basicitem-de{
+    width: 50%;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin-right:5px ;
+    height: 100%;
+    text-align: center;
+}
+.advanceitem-de{
+    width: 50%;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin-left: 5px;
+    text-align: center;
+}
+/* modal inventory */
