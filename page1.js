@@ -14,15 +14,38 @@ const status = [
   }),
 ];
 
-$(document).ready(() => {});
+$(document).ready(() => {
+  $(".wea-box")
+    .on("mouseover", showDetailItem)
+    .on("mouseleave", unShowDetailItem);
+  $(".item-hp-box")
+    .on("mouseover", showDetailItem)
+    .on("mouseleave", unShowDetailItem);
+});
 
-// แสดง modal
 function showDetailItem() {
-  $(".modal").css("display", "flex");
+  $(".modal").css({
+    opacity: "1",
+    transform: "translateX(0)",
+    display: "flex",
+  });
+
+  $(".modal-bg").css({
+    opacity: "1",
+    transform: "translateX(0)",
+    display: "flex",
+  });
 }
-// เลิกแสดง modal
-function unShowDeailItem() {
-  $(".modal").css("display", "none");
+
+function unShowDetailItem() {
+  $(".modal-bg").css({
+    display: "none",
+    opacity: "0 ",
+  });
+  $(".modal").css({
+    display: "none",
+    opacity: "0",
+  });
 }
 // Inventory ช่องเก็บของ
 function showInventory() {
@@ -36,7 +59,8 @@ function showInventory() {
   });
 
   $(".name-of-user-choose").html("<h4>Inventory</h4>");
-  $(".inv-imgg").removeClass("skill-cricle");
+
+  $(".contaner-carddd").removeClass("show-back");
 }
 // Inventory ช่องสกิล
 function showSkill() {
@@ -50,5 +74,6 @@ function showSkill() {
   });
 
   $(".name-of-user-choose").html("<h4>Skill</h4>");
-  $(".inv-imgg").addClass("skill-cricle");
+
+  $(".contaner-carddd").addClass("show-back");
 }
