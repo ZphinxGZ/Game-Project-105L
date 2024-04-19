@@ -15,28 +15,31 @@ const status = [
 ];
 
 $(document).ready(() => {
-  $(".wea-box")
-    .on("mouseover", showDetailItem)
-    .on("mouseleave", unShowDetailItem);
-  $(".item-hp-box")
-    .on("mouseover", showDetailItem)
-    .on("mouseleave", unShowDetailItem);
+  $(".weaboximgg1").on("click",swarpitem1)
+  $(".weaboximgg2").on("click",swarpitem2)
+  $(".armorboximgg1").on("click",swarpitem3)
+  $(".armorboximgg2").on("click",swarpitem4)
 });
-
-function showDetailItem() {
-  $(".modal").css({
-    opacity: "1",
-    transform: "translateX(0)",
-    display: "flex",
-  });
-
-  $(".modal-bg").css({
-    opacity: "1",
-    transform: "translateX(0)",
-    display: "flex",
-  });
+function swarpitem1(){
+  $(".weaboximgg1").html(
+    '<div class="weaboximgg1"></div>'
+  )
 }
-
+function swarpitem2(){
+  $(".weaboximgg2").html(
+    '<div class="weaboximgg2"></div>'
+  )
+}
+function swarpitem3(){
+  $(".armorboximgg1").html(
+    '<div class="armorboximgg1"></div>'
+  )
+}
+function swarpitem4(){
+  $(".armorboximgg2").html(
+    '<div class="armorboximgg2"></div>'
+  )
+}
 function unShowDetailItem() {
   $(".modal-bg").css({
     display: "none",

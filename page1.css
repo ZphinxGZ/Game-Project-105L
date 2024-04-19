@@ -8,7 +8,7 @@ body{
     margin: 0;
     padding: 0;
     /* ป้องกันการมีการเลื่อนบาร์ข้าง */
-    background-image: url(./img/bg.png);
+    background-image: url(https://overmental.com/wp-content/uploads/2015/03/107-njPhhkc.gif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -56,7 +56,7 @@ a{
     height: 50px;
     color: rgb(0, 0, 0);
     margin-top: 20px;
-    border: 4px rgb(68, 68, 68) solid; 
+    border: 4px rgb(251, 0, 0) solid; 
     border-radius: 10px;
     font-size: 1.8vw;
     font-weight: bold;
@@ -70,7 +70,7 @@ a{
     grid-template-columns: repeat(4,1fr); */
     display: flex;
     grid-gap: 5px;
-    background: #000;
+    background: rgba(0, 0, 0, 0.4);
     margin-top: 2vw;
     width: 99vw;
     height: 85vh;
@@ -85,12 +85,14 @@ a{
     flex-direction: column;
 }
 .itembox{
-    background: transparent;
+    background: rgba(0, 0, 0, 0.4);
+    width: 20vw;
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid rgb(12, 12, 12);
     display: flex;
     flex-direction: column;
-    width: 20vw;
     padding: 5px;
-    
 }
 .charactor-box{
     background: transparent;
@@ -121,6 +123,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .name-item-box,
 .name-hp-box{
@@ -139,22 +142,22 @@ a{
 .name-hp-box{
     margin-top: 5px;
 }
-.screen-item,
-.screen-hp{
+.screen-item{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 5px;
     width: 100%;
-    height: 100%;
+    height: 500px;
+    position: relative;
 }
 
 .wea-box,
 .item-hp-box{
-    width: 100%;
-    height: 100%;
-    border: 3px red solid;
+    border: 2px red solid;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 .wea-box img,
 .item-hp-box img{
@@ -165,7 +168,7 @@ a{
 /* item 2*/
 /* Charactor 3 */
 .main-cha-box{
-    background: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 100%;
     /* margin: 5px 5px; */
@@ -187,21 +190,22 @@ a{
     padding: 5px;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: #000;
     color: white;
     border-radius: 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .img-cha-box{
-    border: 3px rgb(0, 0, 0) solid;
+    /* border: 3px rgb(0, 0, 0) solid; */
     border-radius: 5px;
     width: 97%;
     height: 100%;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    background: #292929;
-    transition: 0.3s;
+    background: rgba(0, 0, 0, 0);
+    
     cursor: pointer;
 }
 @keyframes moveUpDown {
@@ -224,15 +228,16 @@ a{
     object-fit: contain;
     animation: moveUpDown 1s infinite;
     transition: transform 0.3s ease;
+    transition: 0.3s;
 }
-.img-cha-box:hover {
+.img-cha-box img:hover {
     transform: scale(1.02);
     /* ย้ายรูปภาพขึ้น */
 }
 /* Charactor 3 */
 /* skill 4 */
 .main-skill-box{
-    background: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 100%;
     /* margin: 5px 5px; */
@@ -245,7 +250,7 @@ a{
 .player-info{
     border: 2px black solid;
     border-radius: 5px;
-    height: 50%;
+    height: 70%;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -261,7 +266,7 @@ a{
     background: #000;
     color: white;
     border-radius: 10px;
-    border: 2px solid red;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,7 +282,7 @@ a{
     background: #000;
     color: white;
     border-radius: 10px;
-    border: 2px solid red;
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,7 +330,7 @@ a{
     width: 100%;
     height: 50%;
     margin-right: 5px;
-    background: #292929;
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 5px;
 }
@@ -335,7 +340,7 @@ a{
 .advanceskill{
     width: 100%;
     height: 50%;
-    background: #292929;
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 5px;
 }
@@ -389,7 +394,7 @@ a{
     transition: 0.3s;
 }
 .main-inventory {
-    background: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
     height: 100%;
     border-radius: 5px;
     padding: 5px;
@@ -401,63 +406,59 @@ a{
 .inventorycard{
     width: 100%;
     height: 100%;
-    position: relative;
-    transition: all 0.5s linear;
-    transform-style: preserve-3d;
+    
 }
 .contaner-carddd{
     width: 100%;
     height: 100%;
-}
-.invent-box-sub-front,
-.invent-box-sub-back{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-gap: 3px;
-    width: 100%;
-    height: 100%;
-    padding: 3px;
-    margin-top: 3px;
-    background: #000;
-    border-radius: 5px;
-
-    position: absolute;
+    
 }
 .invent-box-sub-front{
-    z-index: 2;
-    backface-visibility: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
 }
-.invent-box-sub-back{
-    z-index: 1;
-    transform: rotateY(180deg);
+.imgboxc{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
 }
+
+
 /* .contaner-carddd:hover .inventorycard{
     transform: rotateY(180deg);
 } */
-.show-back .inventorycard {
+/* .show-back .inventorycard {
     transform: rotateY(180deg);
-}
+} */
 .boxxxxx{
-    color: white;
+    
     border: 1px red solid;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-
-    transition: 0.3s;
+    
 }
-.boxxxxx:hover{
+.boxxxxx img:hover{
     transform: scale(1.05);
+    
 }
 .boxxxxx img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s;
 }
 /* inventory */
 
@@ -471,7 +472,7 @@ a{
     background: #000;
     color: white;
     border-radius: 10px;
-    border: 2px solid red;
+    margin-bottom: 5px;
 }
 
 /* submainbox */
@@ -605,3 +606,73 @@ a{
     text-align: center;
 }
 /* modal inventory */
+
+#bot-arm {
+    width: 50%;
+
+}
+.name-cha-box2{
+    width: 90%;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+    text-align: center;
+}
+.weaboxx{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    padding: 5px;
+}
+.armorbox{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    padding: 5px;
+}
+.weaboximgg1,
+.weaboximgg2 {
+    background: #000;
+    border: 2px red solid;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.weaboximgg1 img,
+.weaboximgg2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
+.armorboximgg1,
+.armorboximgg2{
+    background: #000;
+    border: 2px red solid;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.armorboximgg1 img:hover,
+.armorboximgg2 img:hover,
+.weaboximgg1 img:hover,
+.weaboximgg2 img:hover{
+    transform: scale(1.05);
+}
+.armorboximgg1 img,
+.armorboximgg2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
